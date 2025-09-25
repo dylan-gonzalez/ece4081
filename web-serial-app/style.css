@@ -1,0 +1,170 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+#connectBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#connectBtn:hover {
+    background-color: #45a049;
+}
+
+#disconnectBtn {
+    background-color: #f44336;
+    color: white;
+}
+
+#disconnectBtn:hover:not(:disabled) {
+    background-color: #da190b;
+}
+
+#clearBtn {
+    background-color: #2196F3;
+    color: white;
+}
+
+#clearBtn:hover {
+    background-color: #0b7dda;
+}
+
+#sendBtn {
+    background-color: #ff9800;
+    color: white;
+}
+
+#sendBtn:hover:not(:disabled) {
+    background-color: #f57c00;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.status {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.status.connected {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status.disconnected {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.output-section {
+    margin-bottom: 30px;
+}
+
+#output {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    padding: 15px;
+    border-radius: 5px;
+    height: 300px;
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.4;
+    white-space: pre-wrap;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-section > div {
+    display: flex;
+    gap: 10px;
+}
+
+#messageInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#messageInput:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.timestamp {
+    color: #888;
+    font-size: 12px;
+}
+
+.error {
+    color: #ff4444;
+}
+
+.info {
+    color: #4CAF50;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .controls {
+        flex-direction: column;
+    }
+    
+    .input-section > div {
+        flex-direction: column;
+    }
+}

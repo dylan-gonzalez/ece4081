@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 Serial Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ESP32 Serial Monitor</h1>
+        
+        <div class="controls">
+            <button id="connectBtn">Connect to Serial Port</button>
+            <button id="disconnectBtn" disabled>Disconnect</button>
+            <button id="clearBtn">Clear Output</button>
+        </div>
+        
+        <div class="status">
+            <span id="statusText">Not connected</span>
+        </div>
+        
+        <div class="output-section">
+            <h3>Serial Output:</h3>
+            <div id="output"></div>
+        </div>
+        
+        <div class="input-section">
+            <h3>Send Data:</h3>
+            <input type="text" id="messageInput" placeholder="Type message to send...">
+            <button id="sendBtn" disabled>Send</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
